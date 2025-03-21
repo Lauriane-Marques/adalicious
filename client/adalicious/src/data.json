@@ -1,5 +1,4 @@
-
-export const items = [
+[
     {
       "plate": "Hello World Burger",
       "description": "Un cheeseburger classique (pain, steak, fromage, salade, sauce).",
