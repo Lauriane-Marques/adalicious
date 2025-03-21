@@ -1,0 +1,44 @@
+.accueil-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50vw;
+    height: 95vh;
+    margin: auto;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.logo-img{
+    height: 200px;
+}
+
+.welcome{
+    font-size: 4rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-label{
+    font-size: 2rem;
+}
+
+.firstname-input{
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.submit-button{
+    border-radius: 10px;
+    font-size: 2rem;
+    background-color: green;
+    color: white;
+}
