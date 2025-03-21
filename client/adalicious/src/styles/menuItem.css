@@ -1,0 +1,30 @@
+.menu-item{
+    border: 2px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 30vw;
+    margin-bottom: 1rem;
+}
+
+.image{
+    font-size: 5rem;
+    margin: 1rem;
+
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+}
+
+.product button {
+    width: 7rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}

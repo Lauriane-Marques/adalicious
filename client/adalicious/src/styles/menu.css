@@ -10,9 +10,7 @@
 
     border: 2px solid black;
     border-radius: 10px;
+
+    overflow: scroll;
 }
 
-.menu-item{
-    border: 2px solid black;
-    border-radius: 10px;
-}

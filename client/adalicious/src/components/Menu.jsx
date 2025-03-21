@@ -4,6 +4,8 @@ import './../styles/menu.css'
 
 import MenuItem from './MenuItem';
 
+import {items} from './../data'
+
 function Menu() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,11 +23,8 @@ function Menu() {
         <h1>Adalicious 🥦</h1>
       <h3>Bonjour {firstname} !</h3>
 
-      <div className='menu-item'>
-        
-      </div>
-
-
+      {items.map((item) => (
+        <MenuItem key={item.id} item={item} />))}
     </div>
   );
 }
