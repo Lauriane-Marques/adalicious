@@ -20,6 +20,7 @@ function Kitchen() {
   return (
     <div className='orders-container'>
       <button className="user-btn" onClick={()=> navigate('/')}>Interface utilisateur 🥦</button>
+      <button className="history-btn" onClick={()=> navigate('/history')}>Historique des commandes 📝</button>
         <h1>Adalicious 🥦</h1>
       <h2 className="kitchen-view">Vue Cuisine</h2>
 

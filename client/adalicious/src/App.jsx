@@ -3,6 +3,7 @@ import Accueil from './components/Accueil';
 import Menu from './components/Menu'
 import Order from './components/Order'
 import Kitchen from './components/Kitchen';
+import OrderHistory from './components/OrderHistory';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/kitchen',
     element: <Kitchen />
+  },
+  {
+    path: '/history',
+    element: <OrderHistory/>
   }
 ])
 

@@ -35,6 +35,11 @@ app.get("/orders/:id", async (req, res) => {
     return res.json(data.rows[0]);
 });
 
+app.get("/history", async (req, res) => {
+    const data = await pool.query("SELECT * FROM history")
+    return res.json(data.rows)
+})
+
 // Crée une commande
 app.use("/orders", createOrder);
 

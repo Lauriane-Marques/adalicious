@@ -18,7 +18,7 @@
     position: absolute;
     top: 2rem;
     right: 5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: aliceblue;
     background-color: black;
 
@@ -27,6 +27,23 @@
 }
 
 .user-btn:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+.history-btn{
+    position: absolute;
+    top: 7rem;
+    right: 5rem;
+    font-size: 1.5rem;
+    color: aliceblue;
+    background-color: black;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.history-btn:hover{
     color: black;
     background-color: aliceblue;
 }
