@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import './../styles/menu.css'
+import './../styles/kitchen.css'
 
 import KitchenOrder from './KitchenOrder';
 
@@ -17,9 +17,9 @@ function Kitchen() {
 
 
   return (
-    <div className='menu-container'>
+    <div className='orders-container'>
         <h1>Adalicious 🥦</h1>
-      <h3>Vue Cuisine</h3>
+      <h2 className="kitchen-view">Vue Cuisine</h2>
 
       {kitchenOrders.map((item) => (
         <KitchenOrder key={item.id} item={item}/>))}
