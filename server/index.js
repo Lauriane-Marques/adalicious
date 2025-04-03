@@ -15,6 +15,7 @@ const items = require("../client/adalicious/src/data.json")
 const createOrder = require("./createOrder")
 const updateOrder = require("./updateOrder")
 const deleteOrder = require("./deleteOrder")
+const addToHistory = require("./addToHistory")
 
 //Affiche le menu
 app.get("/menu", async (req, res) => {
@@ -42,6 +43,8 @@ app.use("/orders", updateOrder);
 
 // //Supprime une commande
 app.use("/orders", deleteOrder);
+
+app.use("/history", addToHistory)
 
 
 // Lancement du serveur

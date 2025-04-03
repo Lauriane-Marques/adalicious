@@ -6,6 +6,32 @@ function KitchenOrder({ item }) {
     const [isReady, setIsReady] = useState(false)
     const [isDeleted, setIsDeleted] = useState(false)
 
+    const handleHistory = async () => {
+        const orderData = {
+            order_id : item.id,
+            product_name: item.product_name, 
+            user_name: item.user_name,
+          };
+
+          try {
+            const response = await fetch('http://localhost:3000/history/add', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(orderData),
+            });
+            
+            if (response.ok) {
+              const newOrder = await response.json();
+              console.log("Commande ajoutée à l'historique ", newOrder)
+            } else {
+              const errorData = await response.json().catch(() => ({}));
+              console.error("Erreur lors de la création de l'historique:", errorData);
+            }
+          } catch (error) {
+            console.error('Erreur réseau:', error);
+          }
+      }
+    
     const updateOrder = async () => {
         try {
             const response = await fetch(`http://localhost:3000/orders/update/${item.id}`, {
@@ -15,6 +41,7 @@ function KitchenOrder({ item }) {
 
             if(response.ok){
             setIsReady(true)
+            handleHistory()
             console.log("Commande mise à jour avec succès")
             }
 
