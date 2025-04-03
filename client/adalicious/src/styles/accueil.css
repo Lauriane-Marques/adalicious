@@ -12,6 +12,23 @@
     border-radius: 10px;
 }
 
+.kitchen-btn{
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: black;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.kitchen-btn:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
 .logo-img{
     height: 200px;
 }

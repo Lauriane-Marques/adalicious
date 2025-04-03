@@ -17,6 +17,7 @@ function Accueil() {
 
   return (
     <div className="accueil-container">
+      <button className="kitchen-btn" onClick={()=> navigate('/kitchen')}>Interface cuisine 🍴</button>
       <img className="logo-img" src="./src/assets/broccoli.png" alt="Logo" />
       <h1 className="welcome">Bienvenue sur Adalicious</h1>
       <form className="form" onSubmit={handleSubmit}>

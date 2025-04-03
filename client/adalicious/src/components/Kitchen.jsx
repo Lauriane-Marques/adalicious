@@ -5,8 +5,8 @@ import './../styles/kitchen.css'
 import KitchenOrder from './KitchenOrder';
 
 function Kitchen() {
-  
   const [kitchenOrders, setKitchenOrders] = useState([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch('http://localhost:3000/orders')
@@ -18,6 +18,7 @@ function Kitchen() {
 
   return (
     <div className='orders-container'>
+      <button className="user-btn" onClick={()=> navigate('/')}>Interface utilisateur 🥦</button>
         <h1>Adalicious 🥦</h1>
       <h2 className="kitchen-view">Vue Cuisine</h2>
 
