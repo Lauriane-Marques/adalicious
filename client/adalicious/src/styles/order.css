@@ -1,0 +1,40 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+    width: 50vw;
+    height: 95vh;
+    margin: auto;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.order-header{
+    align-self: flex-start;
+    margin-left: 1rem;
+}
+
+.order-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+    width: 35vw;
+    height: 50vh;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.order-image{
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+}

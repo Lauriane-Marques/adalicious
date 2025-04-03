@@ -1,9 +1,11 @@
 const express = require("express");
 const cors = require("cors")
 const app = express();
-app.use(express.json());
-const port = 3000;
+
 app.use(cors()); 
+app.use(express.json());
+
+const port = 3000;
 
 const {getPool} = require('./db')
 const pool = getPool()
@@ -19,9 +21,9 @@ app.get("/menu", async (req, res) => {
     res.json(items)
 } );
 
-// Affiche toutes les commandes
+// Affiche toutes les commandes en cours
 app.get("/orders", async (req, res) => {
-    const data = await pool.query("SELECT * FROM orders");
+    const data = await pool.query("SELECT * FROM orders WHERE status='pending'");
     return res.json(data.rows);
 } );
 
@@ -29,7 +31,7 @@ app.get("/orders", async (req, res) => {
 app.get("/orders/:id", async (req, res) => {
     let orderId = req.params.id
     const data = await pool.query("SELECT * FROM orders WHERE id=$1",[orderId]);
-    return res.json(data.rows);
+    return res.json(data.rows[0]);
 });
 
 // Crée une commande

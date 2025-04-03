@@ -15,6 +15,12 @@ function Menu() {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
+    if (!firstname) {
+      navigate('/');
+    }
+  }, [firstname, navigate]);
+
+  useEffect(() => {
     fetch('http://localhost:3000/menu')
       .then(response => response.json())
       .then(data => setMenuItems(data))
@@ -23,7 +29,6 @@ function Menu() {
 
 
   if (!firstname) {
-    navigate('/');
     return null;
   }
 
@@ -33,7 +38,7 @@ function Menu() {
       <h3>Bonjour {firstname} !</h3>
 
       {menuItems.map((item) => (
-        <MenuItem key={item.id} item={item} />))}
+        <MenuItem key={item.id} item={item} firstname={firstname}/>))}
     </div>
   );
 }
